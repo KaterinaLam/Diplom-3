@@ -20,7 +20,7 @@ public class ProfilePage {
     private SelenideElement logOutButton;
 
     @Step("Click by Constructor")
-    public ConstructorPage constructorPageLinkClick(){
+    public ConstructorPage constructorPageLinkClick() {
         constructorPageLink.click();
         return Selenide.page(ConstructorPage.class);
     }

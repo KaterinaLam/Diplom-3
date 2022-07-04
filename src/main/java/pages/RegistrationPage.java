@@ -7,12 +7,22 @@ import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import models.User;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 
 public class RegistrationPage {
     public static final String PAGE_URL = "https://stellarburgers.nomoreparties.site/register";
 
-    @FindBy(xpath = ".//input[@class='text input__textfield text_type_main-default']")
-    private ElementsCollection fields;
+    // поле "Имя"
+    @FindBy(how = How.XPATH, using = ".//fieldset[1]//input")
+    private SelenideElement nameField;
+
+    // поле "Email"
+    @FindBy(how = How.XPATH, using = ".//fieldset[2]//input")
+    private SelenideElement emailField;
+
+    // поле "Пароль"
+    @FindBy(how = How.XPATH, using = ".//input[@type='password']")
+    private SelenideElement passwordField;
 
     @FindBy(xpath = ".//button[text()='Зарегистрироваться']")
     private SelenideElement registrationButton;
@@ -24,15 +34,15 @@ public class RegistrationPage {
     private SelenideElement enterLink;
 
     private SelenideElement getNameField(){
-        return fields.get(0);
+        return nameField;
     }
 
     private SelenideElement getEmailField(){
-        return fields.get(1);
+        return emailField;
     }
 
     private SelenideElement getPasswordField(){
-        return fields.get(2);
+        return passwordField;
     }
 
     @Step("Fill reg form")

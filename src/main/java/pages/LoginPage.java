@@ -26,7 +26,7 @@ public class LoginPage {
     private SelenideElement restorePassword;
 
     @Step("Input Email and Password")
-    public LoginPage fillLoginPage(User user){
+    public LoginPage fillLoginPage(User user) {
         emailField.scrollTo();
         emailField.setValue(user.getEmail());
 
@@ -37,7 +37,7 @@ public class LoginPage {
     }
 
     @Step("Click by Entrance")
-    public ConstructorPage loginButtonClick(){
+    public ConstructorPage loginButtonClick() {
         loginButton.shouldBe(Condition.exist);
         loginButton.scrollTo();
         loginButton.click();

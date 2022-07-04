@@ -15,7 +15,7 @@ public class Auth {
         this.user = user;
     }
 
-    public String getAccessToken(){
+    public String getAccessToken() {
         return accessToken.replace("Bearer ", "");
     }
 }

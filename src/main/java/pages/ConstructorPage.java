@@ -27,13 +27,13 @@ public class ConstructorPage {
     private SelenideElement fillingsTab;
 
     @Step("Click by Profile Button")
-    public ProfilePage goToProfilePage(){
+    public ProfilePage goToProfilePage() {
         profilePageLink.click();
         return Selenide.page(ProfilePage.class);
     }
 
     @Step("Click by Account")
-    public LoginPage goToLoginPage(){
+    public LoginPage goToLoginPage() {
         loginButton.click();
         return Selenide.page(LoginPage.class);
     }

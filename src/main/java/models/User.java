@@ -43,16 +43,16 @@ public class User {
         );
     }
 
-    public static String getRandomPassword(){
+    public static String getRandomPassword() {
         return getRandomString(MAX_PASSWORD_LENGTH);
     }
 
-    public static String getRandomName(){
+    public static String getRandomName() {
         return getRandomString(MAX_NAME_LENGTH);
     }
 
-    public static String getRandomEmail(){
-        return getRandomString(MAX_EMAIL_LENGTH/2) + "@" + getRandomString(MAX_EMAIL_LENGTH/2) + "." + getRandomString(2);
+    public static String getRandomEmail() {
+        return getRandomString(MAX_EMAIL_LENGTH / 2) + "@" + getRandomString(MAX_EMAIL_LENGTH / 2) + "." + getRandomString(2);
     }
 
     private static String getRandomString(int count) {
